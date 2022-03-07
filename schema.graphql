@@ -1,0 +1,18 @@
+type ContentPart1 {
+  title: String
+}
+
+type ContentPart2 {
+  url: String
+}
+
+union ContentUnion = ContentPart1 | ContentPart2
+
+type Hello {
+  id: String!
+  content: ContentUnion
+}
+
+type Query {
+  hello: Hello
+}

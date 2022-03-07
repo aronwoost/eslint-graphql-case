@@ -1,0 +1,17 @@
+fragment ContentPart1Fragment on ContentPart1 {
+  title
+}
+
+fragment ContentPart2Fragment on ContentPart2 {
+  url
+}
+
+query TestQuery {
+  hello {
+    id
+    content {
+      ...ContentPart1Fragment
+      ...ContentPart2Fragment
+    }
+  }
+}

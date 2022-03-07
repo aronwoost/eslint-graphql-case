@@ -1,0 +1,15 @@
+fragment ContentPart1Fragment on ContentPart1 {
+  title
+}
+
+fragment ContentPart2Fragment on ContentPart2 {
+  url
+}
+
+fragment HelloFragment on Hello {
+  id
+  content {
+    ...ContentPart1Fragment
+    ...ContentPart2Fragment
+  }
+}
